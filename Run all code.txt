@@ -1,0 +1,10 @@
+cd C:\aerial_project
+.\venv\Scripts\Activate.ps1
+python scripts\train_all.py --eval-only
+python yolov8\train_yolo.py --mode val
+python yolov8\train_yolo.py --mode infer --source data\object_detection_dataset\images\test
+streamlit run app\streamlit_app.py
+
+
+
+python -m pytest tests -v

@@ -1,0 +1,30 @@
+# ============================================================
+# YOLOv8 Dataset Configuration — Aerial Bird vs Drone Detection
+# ============================================================
+
+# Paths (relative to project root or absolute)
+path: ../data/object_detection_dataset   # Root dataset directory
+
+train: images/train   # Training images (relative to 'path')
+val:   images/val     # Validation images
+test:  images/test    # Test images
+
+# Number of classes
+nc: 2
+
+# Class names (index must match label files)
+names:
+  0: bird
+  1: drone
+
+# Optional: class weights for imbalanced datasets
+# class_weights: [1.5, 1.0]   # Upweight bird if underrepresented
+
+# ============================================================
+# Annotation Format (YOLOv8 .txt per image):
+#   <class_id> <x_center> <y_center> <width> <height>
+#   All values normalized to [0, 1] relative to image dimensions
+#
+# Example (bird at center of 640x640 image):
+#   0 0.5 0.5 0.3 0.25
+# ============================================================
